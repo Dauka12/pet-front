@@ -1,3 +1,4 @@
+import { NextUIProvider } from "@nextui-org/react"
 import React from "react"
 import { createRoot } from "react-dom/client"
 import { Provider } from "react-redux"
@@ -13,7 +14,9 @@ if (container) {
   root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <NextUIProvider>
+          <App />
+        </NextUIProvider>
       </Provider>
     </React.StrictMode>,
   )
